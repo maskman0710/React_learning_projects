@@ -6,7 +6,7 @@ function About() {
                 <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
                     <div className="md:5/12 lg:w-5/12">
                         <img
-                            src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
+                            src="https://static.vecteezy.com/system/resources/thumbnails/049/547/352/small/golden-sunset-hd-backgrounds-captivatings-for-serene-scenes-photo.jpg"
                             alt="image"
                         />
                     </div>
