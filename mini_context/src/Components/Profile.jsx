@@ -3,10 +3,11 @@ import usercont from '../Context/Usercontext';
 function Profile() {
 
     const {username} = useContext(usercont)
+    const {password} = useContext(usercont)
     
     if(!username) return <div className='mt-4'> Please Login</div>
 
-    return <div className='mt-4'>Welcome {username.user}</div>
+    return (<div className='mt-4'>Welcome {username.user} {username.pass}</div>)
 }
 
 export default Profile;
