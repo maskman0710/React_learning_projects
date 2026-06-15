@@ -3,14 +3,14 @@ import { useTodo } from '../context/index';
 function TodoItem({ todo }) {
     const [istodoedible,settodoedible] = useState(false)
     const [todomessage,settodomessage] = useState(todo.todo) 
-    const {updateTodo,deleteTodo,toggleComplete} = useTodo
+    const {updateTodo,deletetodo,togglecomplete} = useTodo()
 
     const edittodo = ()=>{
         updateTodo (todo.id,{...todo,todo:todomessage})
         settodoedible(false)
     }
     const togglecompleted  = () =>{
-        toggleComplete(todo.id)
+        togglecomplete(todo.id)
     }
     return (
         <div
@@ -22,7 +22,7 @@ function TodoItem({ todo }) {
                 type="checkbox"
                 className="cursor-pointer"
                 checked={todo.completed}
-                onChange={toggleComplete}
+                onChange={togglecompleted}
             />
             <input
                 type="text"
@@ -50,7 +50,7 @@ function TodoItem({ todo }) {
             {/* Delete Todo Button */}
             <button
                 className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0"
-                onClick={() => deleteTodo(todo.id)}
+                onClick={() => deletetodo(todo.id)}
             >
                 ❌
             </button>
